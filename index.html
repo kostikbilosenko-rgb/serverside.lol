@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serversiding.lol - Meet The Best Roblox Serverside On The Market</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            DEFAULT: '#22c55e',
+                            hover: '#16a34a',
+                            light: '#dcfce7'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-brand selection:text-white">
+
+    <!-- Верхняя панель уведомлений -->
+    <div class="bg-brand text-zinc-950 text-xs sm:text-sm font-bold text-center py-2 px-4 shadow-sm">
+        🚀 Website has been updated! Crypto Payments are now available at our checkout.
+    </div>
+
+    <!-- Навигационная панель -->
+    <header class="border-b border-zinc-800/60 bg-zinc-950/80 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 rounded-lg bg-brand/10 border border-brand/20 flex items-center justify-center overflow-hidden">
+                    <img src="https://i.ibb.co/GfXzqyxH/itsphoto.png" alt="Logo" class="w-full h-full object-cover">
+                </div>
+                <span class="text-lg tracking-wide">SERVER<span class="font-bold text-brand">SIDING</span><span class="text-xs text-brand font-mono ml-1">.lol</span></span>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8 text-sm text-zinc-400">
+                <a href="#home" class="hover:text-brand transition-colors">Home</a>
+                <a href="#pricing" class="hover:text-brand transition-colors">Pricing</a>
+                <a href="#features" class="hover:text-brand transition-colors">Features</a>
+                <a href="#showcases" class="hover:text-brand transition-colors">Showcases</a>
+            </nav>
+            <div>
+                <button onclick="openModal()" class="inline-flex items-center justify-center px-4 py-2 rounded-lg text-sm font-medium bg-zinc-900 border border-zinc-800 hover:bg-zinc-800 text-zinc-200 transition-colors cursor-pointer">
+                    Sign In
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Главный экран (Hero Section) -->
+    <section id="home" class="relative pt-20 pb-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight max-w-4xl mx-auto leading-tight">
+                Meet The <span class="text-brand underline decoration-brand/50 underline-offset-8">Best</span> Roblox Serverside On The Market
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto">
+                Professional web platform for executing serverside scripts instantly without the need to download complex applications.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#pricing" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3 rounded-xl text-sm font-semibold bg-brand text-zinc-950 hover:bg-brand-hover transition-colors shadow-lg shadow-brand/20">
+                    View Plans
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Модальное окно входа -->
+    <div id="signinModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-zinc-400 hover:text-white text-xl font-bold cursor-pointer">&times;</button>
+            <h3 class="text-xl font-bold mb-2">Sign In to Serversiding</h3>
+            <p class="text-sm text-zinc-400 mb-6">Choose your preferred sign-in method.</p>
+            <div class="space-y-3">
+                <!-- Авторизация через Discord -->
+                <a href="https://discord.com/oauth2/authorize?client_id=1533089706265546792&response_type=code&redirect_uri=https%3A%2F%2Fkostikbilosenko-rgb.github.io%2Fserverside.lol%2F&scope=identify+email" 
+                   class="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-xl text-sm font-semibold bg-[#5865F2] hover:bg-[#4752C4] text-white transition-colors cursor-pointer text-decoration-none">
+                    💬 Sign in with Discord
+                </a>
+                
+                <!-- Переход на твой отдельный сайт дашборда при нажатии "Гость" -->
+                <a href="https://kostikbilosenko-rgb.github.io/dasbord/" 
+                   class="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-xl text-sm font-semibold bg-brand/10 text-brand border border-brand/30 hover:bg-brand/20 transition-colors cursor-pointer text-decoration-none">
+                    👤 Continue as Guest
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('signinModal');
+        function openModal() { modal.classList.remove('hidden'); }
+        function closeModal() { modal.classList.add('hidden'); }
+        window.onclick = function(event) { if (event.target == modal) closeModal(); }
+    </script>
+</body>
+</html>
